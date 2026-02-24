@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Zalmo.UI.ImageLibraryPage"
+             Title="Image Library">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="20">
+            <Label Text="Select images or a folder to organize:" FontSize="18" FontAttributes="Bold" />
+            <!-- Picker removed as only folder upload is supported -->
+            <Button Text="Browse..." Clicked="OnBrowseClicked" />
+            <Label x:Name="SelectedPathLabel" Text="No file or folder selected." FontSize="12" />
+            <Button Text="Organize Images" Clicked="OnOrganizeClicked" />
+            <Label x:Name="ResultLabel" Text="" FontSize="12" TextColor="Green" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
