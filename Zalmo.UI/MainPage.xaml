@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zalmo.UI.MainPage"
+             Title="Welcome">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="20">
+            <Label Text="Image Library Organizer"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="This app lets you batch-import images, extract their metadata, and organize them into a date-based library."
+                   FontSize="16"
+                   HorizontalOptions="Center" />
+            <Frame BackgroundColor="#FFF8E1" Padding="10" CornerRadius="8">
+                <Label Text="Disclaimer: Some chat apps may strip EXIF metadata from images. Only image files (.jpeg, .jpg, .bmp, etc.) are supported."
+                       FontSize="12"
+                       TextColor="#B71C1C" />
+            </Frame>
+            <Label Text="Configuration" FontSize="18" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Folder naming pattern:" VerticalOptions="Center" />
+                <Entry x:Name="FolderPatternEntry" WidthRequest="120" Placeholder="yyyy.MM.dd" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Time period (days):" VerticalOptions="Center" />
+                <Entry x:Name="PeriodDaysEntry" WidthRequest="60" Keyboard="Numeric" Placeholder="30" />
+            </HorizontalStackLayout>
+            <Button Text="Continue" Clicked="OnContinueClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
